@@ -10,5 +10,5 @@ from src.logger import logger
 def guess_text(input_path: Path) -> None:
     logger.info("Guessing the text of the audio")
 
-    #separate_voice(input_path)
+    separate_voice(input_path)
     extract_text_from_voice(input_path)
