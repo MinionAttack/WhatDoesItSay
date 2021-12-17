@@ -1,0 +1,87 @@
+version: 1
+
+formatters:
+  standard:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  error:
+    format: "%(levelname)s <PID %(process)d:%(processName)s> %(name)s.%(funcName)s(): %(message)s"
+
+filters:
+  info_filter:
+    (): src.logger.InfoFilter
+  warning_filter:
+    (): src.logger.WarningFilter
+  error_filter:
+    (): src.logger.ErrorFilter
+  critical_filter:
+    (): src.logger.CriticalFilter
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: standard
+    level: DEBUG
+
+  debug_file_handler:
+    class: logging.handlers.RotatingFileHandler
+    formatter: standard
+    level: DEBUG
+    filename: logs/debug.log
+    encoding: utf8
+    mode: "w"
+    maxBytes: 10485760 # 10MB
+    backupCount: 1
+
+  info_file_handler:
+    class: logging.handlers.RotatingFileHandler
+    formatter: standard
+    level: INFO
+    filename: logs/info.log
+    encoding: utf8
+    mode: "w"
+    maxBytes: 10485760 # 10MB
+    backupCount: 1
+    filters: [ info_filter ]
+
+  warning_file_handler:
+    class: logging.handlers.RotatingFileHandler
+    formatter: standard
+    level: WARNING
+    filename: logs/warning.log
+    encoding: utf8
+    mode: "w"
+    maxBytes: 10485760 # 10MB
+    backupCount: 1
+    filters: [ warning_filter ]
+
+  error_file_handler:
+    class: logging.handlers.RotatingFileHandler
+    formatter: error
+    level: ERROR
+    filename: logs/error.log
+    encoding: utf8
+    mode: "w"
+    maxBytes: 10485760 # 10MB
+    backupCount: 1
+    filters: [ error_filter ]
+
+  critical_file_handler:
+    class: logging.handlers.RotatingFileHandler
+    formatter: error
+    level: CRITICAL
+    filename: logs/critical.log
+    encoding: utf8
+    mode: "w"
+    maxBytes: 10485760 # 10MB
+    backupCount: 1
+    filters: [ critical_filter ]
+
+loggers:
+  development:
+    handlers: [ console, debug_file_handler ]
+    propagate: false
+  production:
+    handlers: [ info_file_handler, warning_file_handler, error_file_handler, critical_file_handler ]
+    propagate: false
+root:
+  handlers: [ debug_file_handler, info_file_handler, warning_file_handler, error_file_handler, critical_file_handler ]
