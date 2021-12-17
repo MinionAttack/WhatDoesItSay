@@ -7,8 +7,8 @@ from modules.speech import extract_text_from_voice
 from src.logger import logger
 
 
-def guess_text(input_path: Path) -> None:
+def guess_text(input_path: Path, language_code: str, model: str) -> None:
     logger.info("Guessing the text of the audio")
 
     separate_voice(input_path)
-    extract_text_from_voice(input_path)
+    extract_text_from_voice(input_path, language_code, model)

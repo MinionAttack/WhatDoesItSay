@@ -11,3 +11,5 @@ LOGS_FOLDER = 'logs'
 LOGS_MODE = 'development'
 # Available levels: CRITICAL = 50, ERROR = 40, WARNING = 30, INFO = 20, DEBUG = 10
 LOGS_LEVEL = 20
+
+TRANSCRIPTION_FILE_NAME = "transcriptions"
