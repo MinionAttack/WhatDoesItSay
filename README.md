@@ -26,8 +26,9 @@ If you know how they can be improved don't hesitate to let me know!
 
 In order to use the program it is necessary to have a compatible environment:
 
-- **Operative system**: A *Linux* or *Windows* based system where the program will run.
-- **Python version**: The bot has been developed with version *3.8.9*. It may work with older versions, but this has not been tested.
+- **Operative system**: A *Linux* based system where the program will run. On *Windows* the program should work but this has not been
+  tested.
+- **Python version**: The program has been developed with version *3.8.9*. It may work with older versions, but this has not been tested.
 - **A Google Cloud Platform account**: You need to have an active account and in addition to that:
   - **NOTE**: The project has been realised using non-public buckets. The use of public buckets has not been tested so in that case the *
     Google Cloud Platform* configuration may vary.
@@ -72,7 +73,7 @@ In this section you can have a quick view of the project structure.
 └── main.py
 ```
 
-Directories marked with a (*) will be created by the bot as needed.
+Directories marked with a (*) will be created by the program as needed.
 
 ## Installation
 
@@ -81,7 +82,7 @@ This section expects the requirements stated in the previous section to be met a
 - **Program dependencies**: The program has some dependencies that must be installed in order to work. Those dependencies can be installed
   with the _requirements.txt_ file:
   - `pip install -r requirements.txt`
-- It is highly recommended to use a **virtual environment** (*venv*), so the bot dependencies installation will not conflict with the
+- It is highly recommended to use a **virtual environment** (*venv*), so the program dependencies installation will not conflict with the
   packages installed on the system.
 
 If you want to run the program in a *venv*, open a terminal in the project's root folder and run:
@@ -110,14 +111,14 @@ file.
 - **BUCKET_NAME**: The name of the bucket created in *Google Cloud Storage* where the files will be uploaded and deleted.
 
 There are other properties in the file, but they should not be changed unless you know what you are doing or if you want to continue with
-the development of the bot.
+the development of the program.
 
 ## How to use
 
 This section explains how to use the program.
 
 - Remember to activate the *venv* if you are using it.
-- Add the root folder of the bot to *Python*'s path variable:
+- Add the root folder of the program to *Python*'s path variable:
   - `export PYTHONPATH=$PYTHONPATH:/full/path/project/root/folder/`
 - Go to the `src` folder of the project and grant execute permissions to `main.py` file:
   - `$ chmod +x main.py`
