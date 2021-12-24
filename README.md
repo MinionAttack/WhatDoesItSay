@@ -69,8 +69,8 @@ In this section you can have a quick view of the project structure.
 │ ├── properties.py  
 │ └── <Google Cloud Password File>.json
 └── src  
-├── logger.py  
-└── main.py
+  ├── logger.py  
+  └── main.py
 ```
 
 Directories marked with a (*) will be created by the program as needed.
