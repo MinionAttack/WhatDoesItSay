@@ -44,7 +44,7 @@ Markdown==3.3.6
 mypy-extensions==0.4.3
 norbert==0.2.1
 numba==0.53.1
-numpy==1.21.0
+numpy==1.19.5
 oauthlib==3.1.1
 opt-einsum==3.3.0
 packaging==21.3
@@ -73,7 +73,7 @@ spleeter==2.3.0
 tensorboard==2.7.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.0
-tensorflow==2.5.3
+tensorflow==2.5.0
 tensorflow-estimator==2.5.0
 termcolor==1.1.0
 threadpoolctl==3.0.0
