@@ -30,7 +30,7 @@ h2==4.1.0
 h5py==3.1.0
 hpack==4.0.0
 httpcore==0.13.7
-httpx==0.19.0
+httpx==0.23.0
 hyperframe==6.0.1
 idna==3.3
 importlib-metadata==4.8.3
