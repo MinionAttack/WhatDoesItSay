@@ -73,7 +73,7 @@ spleeter==2.3.0
 tensorboard==2.7.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.0
-tensorflow==2.5.0
+tensorflow==2.9.3
 tensorflow-estimator==2.5.0
 termcolor==1.1.0
 threadpoolctl==3.0.0
